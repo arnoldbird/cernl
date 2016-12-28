@@ -22,7 +22,17 @@ try {
     /**
      * Get config service for use in inline setup below
      */
+    
+    // Core configuration.
     $config = $di->getConfig();
+    
+    // Custom configuration.
+    $my_config = $config['application']['myConfigDir'];
+    if (file_exists($my_config)) {
+      include $my_config;
+      $custom = new \Phalcon\Config($my);
+      $config->merge($custom);
+    }
 
     /**
      * Include Autoloader

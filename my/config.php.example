@@ -1,0 +1,20 @@
+<?php
+/*
+ * Custom configuration.  Edit this file to override the core config.
+ */
+
+$my['database'] = [
+  'adapter'     => 'Mysql',
+  'host'        => 'localhost',
+  'username'    => 'myusername',
+  'password'    => 'mypassword',
+  'dbname'      => 'mydatabase',
+  'charset'     => 'utf8',
+];
+
+$my['application'] = [];
+
+$my['changeme'] = [
+  'mykey' => 'myvalue',
+  'greetings' => 'hello developer',
+];
