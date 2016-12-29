@@ -1,6 +1,5 @@
 <?php
 use Phalcon\Di\FactoryDefault;
-use Phalcon\Flash\Direct as FlashDirect;
 
 error_reporting(E_ALL);
 
@@ -36,7 +35,7 @@ try {
       $config->merge($custom);
     }
     else {
-      $flash = new FlashDirect();
+      $flash = new Phalcon\Flash\Direct();
       $msg = _('Looks like you need to copy config.php.example to config.php.');
       $msg .= ' ' . _('See the README.txt in the base directory.');
       $flash->notice($msg);
