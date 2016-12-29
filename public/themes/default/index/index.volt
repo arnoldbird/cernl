@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Welcome to cernl/tembo</h1>
+  <h1>Welcome to cernl</h1>
 </div>
 
 <p>You're viewing the default theme.</p>
