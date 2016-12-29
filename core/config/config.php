@@ -20,7 +20,7 @@ return new \Phalcon\Config([
         'viewsDir'       => BASE_PATH . '/public/themes/default',
         'pluginsDir'     => APP_PATH . '/plugins/',
         'libraryDir'     => APP_PATH . '/library/',
-        'cacheDir'       => BASE_PATH . '/cache/',
+        'cacheDir'       => BASE_PATH . '/my/cache/',
         'myConfigDir'   => BASE_PATH . '/my/config.php',
 
         // This allows the baseUri to be understand project paths that are not in the root directory
