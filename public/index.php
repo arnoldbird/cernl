@@ -1,5 +1,6 @@
 <?php
 use Phalcon\Di\FactoryDefault;
+use Phalcon\Flash\Direct as FlashDirect;
 
 error_reporting(E_ALL);
 
@@ -28,10 +29,16 @@ try {
     
     // Custom configuration.
     $my_config = $config['application']['myConfigDir'];
+    
     if (file_exists($my_config)) {
       include $my_config;
       $custom = new \Phalcon\Config($my);
       $config->merge($custom);
+    }
+    else {
+      $flash = new FlashDirect();
+      $msg = _('Looks like you need to copy config.php.example to config.php.');
+      $flash->notice($msg);
     }
 
     /**
