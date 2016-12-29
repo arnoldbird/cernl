@@ -1,6 +1,8 @@
 ### About
 
-www.cernl.com
+Cernl is pre-release software and is unstable.
+
+More: www.cernl.com
 
 ### Install
 
