@@ -1,3 +1,7 @@
+### About
+
+www.cernl.com
+
 ### Install
 
 Copy my/config.php.example to my/config.php.
