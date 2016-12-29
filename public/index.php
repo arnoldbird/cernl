@@ -30,7 +30,7 @@ try {
     // Custom configuration.
     $my_config = $config['application']['myConfigDir'];
     
-    if (file_exists($my_config)) {
+    if (!file_exists($my_config)) {
       include $my_config;
       $custom = new \Phalcon\Config($my);
       $config->merge($custom);
@@ -38,6 +38,7 @@ try {
     else {
       $flash = new FlashDirect();
       $msg = _('Looks like you need to copy config.php.example to config.php.');
+      $msg .= ' ' . _('See the README.txt in the base directory.');
       $flash->notice($msg);
     }
 
