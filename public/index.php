@@ -27,7 +27,7 @@ try {
     $config = $di->getConfig();
     
     // Custom configuration.
-    $my_config = BASE_PATH . '/my/config.php';
+    $my_config = BASE_PATH . '/my/cl-config.php';
     
     if (file_exists($my_config)) {
       include $my_config;
@@ -36,8 +36,9 @@ try {
     }
     else {
       $flash = new Phalcon\Flash\Direct();
-      $msg = _('Looks like you need to copy config.php.example to config.php.');
-      $msg .= ' ' . _('See the README.txt in the base directory.');
+      $msg = _('Looks like you need to copy cl-config.php.example to
+               cl-config.php.');
+      $msg .= ' ' . _('See the README.md in the base directory.');
       $flash->notice($msg);
     }
 
