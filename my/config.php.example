@@ -3,6 +3,8 @@
  * Custom configuration.  Edit this file to override the core config.
  */
 
+define('CERNL_THEME', '');
+
 $my['database'] = [
   'adapter'     => 'Mysql',
   'host'        => 'localhost',
@@ -12,9 +14,13 @@ $my['database'] = [
   'charset'     => 'utf8',
 ];
 
-$my['application'] = [];
-
 $my['changeme'] = [
   'mykey' => 'myvalue',
   'greetings' => 'hello developer',
 ];
+
+// Check if the specified theme exists.
+$my_theme = BASE_PATH . '/my/themes/' . CERNL_THEME;
+if (file_exists($my_theme . '/theme.php')) {
+  $my['application']['viewsDir'] = $my_theme;
+}

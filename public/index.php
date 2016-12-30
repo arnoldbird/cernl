@@ -27,7 +27,7 @@ try {
     $config = $di->getConfig();
     
     // Custom configuration.
-    $my_config = $config['application']['myConfigDir'];
+    $my_config = BASE_PATH . '/my/config.php';
     
     if (file_exists($my_config)) {
       include $my_config;
