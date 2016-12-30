@@ -14,14 +14,8 @@ try {
      */
     $di = new FactoryDefault();
 
-    /**
-     * Read services
-     */
+    // Read services.
     include APP_PATH . "/config/services.php";
-
-    /**
-     * Get config service for use in inline setup below
-     */
     
     // Core configuration.
     $config = $di->getConfig();
@@ -42,14 +36,10 @@ try {
       $flash->notice($msg);
     }
 
-    /**
-     * Include Autoloader
-     */
+    // Include Autoloader.
     include APP_PATH . '/config/loader.php';
 
-    /**
-     * Handle the request
-     */
+    // Handle the request.
     $application = new \Phalcon\Mvc\Application($di);
 
     echo $application->handle()->getContent();
