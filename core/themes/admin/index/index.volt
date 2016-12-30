@@ -2,5 +2,5 @@
   <h1>Welcome to cernl</h1>
 </div>
 
-<p>You're viewing the starter theme.</p>
+<p>You're viewing the admin theme.</p>
 
