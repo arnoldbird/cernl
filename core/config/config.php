@@ -16,10 +16,7 @@ return new \Phalcon\Config([
         'appDir'         => APP_PATH . '/',
         'controllersDir' => APP_PATH . '/controllers/',
         'modelsDir'      => APP_PATH . '/models/',
-        'migrationsDir'  => APP_PATH . '/migrations/',
-        'viewsDir'       => BASE_PATH . '/public/themes/default',
-        'pluginsDir'     => APP_PATH . '/plugins/',
-        'libraryDir'     => APP_PATH . '/library/',
+        'viewsDir'       => APP_PATH . '/themes/starter',
         'cacheDir'       => BASE_PATH . '/my/cache/',
         'myConfigDir'   => BASE_PATH . '/my/config.php',
 
