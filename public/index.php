@@ -21,7 +21,7 @@ try {
     $config = $di->getConfig();
     
     // Custom configuration.
-    $my_config = BASE_PATH . '/my/cl-config.php';
+    $my_config = BASE_PATH . '/public/my/cl-config.php';
     
     if (file_exists($my_config)) {
       include $my_config;

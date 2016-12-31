@@ -1,2 +1,2 @@
-my/cache/*
-my/config.php
+public/my/cache/*
+public/my/cl-config.php
